@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ColeiraQR</string>
+    <string name="fazer_login">Fazer Login</string>
+    <string name="text_cadastro">não possui uma conta? CADASTRE-SE</string>
+    <string name="title_cadastro">Cadastre-se</string>
+    <string name="title_tipo">Escolha o tipo de cadastro</string>
+    <string name="esqueci_senha">Esqueceu a senha?</string>
+    <string name="cadastro_tutor">Cadastrar-se como tutor</string>
+    <string name="cadastro_ponto">Cadastrar um ponto de resgate</string>
+    <string name="voltar_cadastro">voltar</string>
+    <string name="preencher_tutor">Preencha os campos a seguir:</string>
+    <string name="meus_pets">MEUS PETS</string>
+    <string name="cadastrar_pet">Cadastrar pet</string>
+    <string name="deslogar_usuario">Sair</string>
+    <string name="pets_desaparecidos">PETS DESAPARECIDOS</string>
+    <string name="obter_qr">Obter QR Code</string>
+    <string name="msg_PetDesaparecido">PET DESAPARECIDO</string>
+    <string name="msg_desaparecimento">O desaparecimento de seu Pet foi relatado com sucesso. Assim que ele for encontrado será emitido uma notificação em seu celular com os dados de quem o encontrou e com sua localização atual.</string>
+    <string name="encontrei_pet">Encontrei meu pet</string>
+    <string name="pet_encontrado">Seu pet foi encontrado!</string>
+    <string name="pet_registradopor">Pet registrado por:</string>
+    <string name="data_resgate">Data:</string>
+    <string name="hora_resgate">Hora:</string>
+    <string name="contato_anjo">Contato:</string>
+    <string name="voce_encontrou">Você encontrou um pet perdido!</string>
+    <string name="insira_dados">Insira seus dados para notificarmos o dono do Pet.</string>
+    <string name="entrar_contato_dono">Entrar em contato com o dono</string>
+    <string name="entrar_contato_ponto">Entrar em contato com um ponto de resgate</string>
+    <string name="localizacao">Localização do Pet</string>
+    <string name="abrir_mapa">Abrir mapa</string>
+    <string name="escolha_localizacao">ESCOLHA A LOCALIZAÇÃO</string>
+    <string name="escolher_foto">ESCOLHA UMA FOTO DE PERFIL</string>
+    <string name="editar_foto">Editar</string>
+</resources>

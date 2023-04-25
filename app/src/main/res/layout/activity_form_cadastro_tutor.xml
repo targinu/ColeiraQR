@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormCadastroTutor">
+
+    <View
+        android:id="@+id/ContainerCima"
+        style="@style/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:background="@color/Very_light_gray"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/bt_voltar_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voltar_cadastro"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/preencha_tutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preencher_tutor"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/ContainerCima"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCima"
+        app:layout_constraintTop_toBottomOf="@id/bt_voltar_cadastro"/>
+
+    <View
+        android:id="@+id/ContainerComponents"
+        style="@style/ContainerComponents"
+        android:layout_height="580dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContainerCima"/>
+
+    <EditText
+        android:id="@+id/edit_nome"
+        style="@style/Edit_Text"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toTopOf="@id/ContainerComponents"/>
+
+    <EditText
+        android:id="@+id/edit_sobrenome"
+        style="@style/Edit_Text"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_nome"/>
+
+    <EditText
+        android:id="@+id/edit_email"
+        style="@style/Edit_Text"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_sobrenome"/>
+
+    <EditText
+        android:id="@+id/edit_telefone"
+        style="@style/Edit_Text"
+        android:hint="Telefone"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_email"/>
+
+    <EditText
+        android:id="@+id/edit_endereco"
+        style="@style/Edit_Text"
+        android:hint="Endereço"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_telefone"/>
+
+
+    <EditText
+        android:id="@+id/edit_senha"
+        style="@style/Edit_Text"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_endereco"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_cadastrartutor"
+        style="@style/Button"
+        android:text="@string/title_cadastro"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_senha"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

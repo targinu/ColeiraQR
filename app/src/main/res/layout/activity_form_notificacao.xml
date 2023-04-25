@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormNotificacao">
+
+    <View
+        android:id="@+id/ContainerComponents"
+        style="@style/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:background="@color/Very_light_gray"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/bt_voltar_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/voltar_cadastro"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintTop_toTopOf="@id/ContainerComponents"/>
+
+    <View
+        android:id="@+id/ContainerPet"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_voltar_cadastro"/>
+
+    <ImageView
+        android:id="@+id/fotoPet"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_pet"
+        app:layout_constraintStart_toStartOf="@id/ContainerPet"
+        app:layout_constraintEnd_toEndOf="@id/ContainerPet"
+        app:layout_constraintTop_toTopOf="@id/ContainerPet"
+        app:layout_constraintBottom_toBottomOf="@id/ContainerPet"/>
+
+    <TextView
+        android:id="@+id/textNomePet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/ContainerPet"
+        app:layout_constraintLeft_toRightOf="@id/ContainerPet"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textRaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raça "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textNomePet"
+        app:layout_constraintLeft_toRightOf="@id/ContainerPet"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textPorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porte"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textNomePet"
+        app:layout_constraintLeft_toRightOf="@id/textRaca"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textPelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de pelo"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textRaca"
+        app:layout_constraintLeft_toRightOf="@id/ContainerPet"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textVirgula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=","
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textPorte"
+        app:layout_constraintLeft_toRightOf="@id/textPelo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idade"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textPorte"
+        app:layout_constraintLeft_toRightOf="@id/textVirgula"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/ContainerNotificacao"
+        style="@style/ContainerComponents"
+        android:layout_width="380dp"
+        android:layout_height="550dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContainerComponents"/>
+
+    <TextView
+        android:id="@+id/title_encontrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/pet_encontrado"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/ContainerNotificacao"
+        app:layout_constraintEnd_toEndOf="@id/ContainerNotificacao"
+        app:layout_constraintTop_toTopOf="@id/ContainerNotificacao" />
+
+    <TextView
+        android:id="@+id/title_registrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/pet_registradopor"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/ContainerNotificacao"
+        app:layout_constraintTop_toBottomOf="@id/title_encontrado"/>
+
+    <TextView
+        android:id="@+id/textAnjo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Anjo"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/title_encontrado"
+        app:layout_constraintLeft_toRightOf="@id/title_registrado"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/data_resgate"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/ContainerNotificacao"
+        app:layout_constraintTop_toBottomOf="@id/title_registrado"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/hora_resgate"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/ContainerNotificacao"
+        app:layout_constraintTop_toBottomOf="@id/textData"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textContato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/contato_anjo"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/ContainerNotificacao"
+        app:layout_constraintTop_toBottomOf="@id/textHora"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textLocalizacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/localizacao"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/ContainerNotificacao"
+        app:layout_constraintEnd_toEndOf="@id/ContainerNotificacao"
+        app:layout_constraintTop_toBottomOf="@id/textContato"
+        tools:ignore="MissingConstraints"
+        android:onClick="buscarInformacoesGPS"/>
+
+    <WebView
+        android:id="@+id/webv"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/ContainerNotificacao"
+        app:layout_constraintEnd_toEndOf="@id/ContainerNotificacao"
+        app:layout_constraintTop_toBottomOf="@id/textLocalizacao"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

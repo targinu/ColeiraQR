@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormCadastroPet">
+
+    <View
+        android:id="@+id/ContainerComponents"
+        style="@style/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:background="@color/Very_light_gray"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/ContainerPet"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/fotoPet"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_pet"
+        app:layout_constraintStart_toStartOf="@id/ContainerPet"
+        app:layout_constraintEnd_toEndOf="@id/ContainerPet"
+        app:layout_constraintTop_toTopOf="@id/ContainerPet"
+        app:layout_constraintBottom_toBottomOf="@id/ContainerPet"/>
+
+    <TextView
+        android:id="@+id/textPetFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imagem"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/ContainerPet"
+        app:layout_constraintEnd_toEndOf="@id/ContainerPet"
+        app:layout_constraintTop_toBottomOf="@id/ContainerPet"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textCadastroPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar Pet"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ContainerComponents"
+        app:layout_constraintTop_toTopOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/ContainerCadastro"
+        style="@style/ContainerComponents"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/ContainerComponents" />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        style="@style/Edit_Text"
+        android:hint="Nome do Pet"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/ContainerCadastro"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCadastro"
+        app:layout_constraintTop_toTopOf="@id/ContainerCadastro"/>
+
+    <EditText
+        android:id="@+id/edit_idade"
+        style="@style/Edit_Text"
+        android:hint="Idade"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@id/ContainerCadastro"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCadastro"
+        app:layout_constraintTop_toBottomOf="@id/edit_nome"/>
+
+    <EditText
+        android:id="@+id/edit_pelo"
+        style="@style/Edit_Text"
+        android:hint="Tipo de pelo"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/ContainerCadastro"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCadastro"
+        app:layout_constraintTop_toBottomOf="@id/edit_idade"/>
+
+    <EditText
+        android:id="@+id/edit_porte"
+        style="@style/Edit_Text"
+        android:hint="Porte do Pet"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/ContainerCadastro"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCadastro"
+        app:layout_constraintTop_toBottomOf="@id/edit_pelo"/>
+
+    <EditText
+        android:id="@+id/edit_raca"
+        style="@style/Edit_Text"
+        android:hint="Raça"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/ContainerCadastro"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCadastro"
+        app:layout_constraintTop_toBottomOf="@id/edit_pelo"/>
+
+    <EditText
+        android:id="@+id/edit_temperamento"
+        style="@style/Edit_Text"
+        android:hint="Temperamento"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/ContainerCadastro"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCadastro"
+        app:layout_constraintTop_toBottomOf="@id/edit_raca"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_cadastrar_pet"
+        android:background="@drawable/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar_pet"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="@id/edit_temperamento"
+        app:layout_constraintTop_toBottomOf="@id/edit_temperamento"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_voltar"
+        android:background="@drawable/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="@string/voltar_cadastro"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="@id/edit_temperamento"
+        app:layout_constraintTop_toBottomOf="@id/edit_temperamento"
+        />
+
+    <ImageView
+        android:id="@+id/ivQRCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/ContainerCadastro"
+        app:layout_constraintEnd_toEndOf="@id/ContainerCadastro"
+        app:layout_constraintTop_toBottomOf="@id/ContainerCadastro"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

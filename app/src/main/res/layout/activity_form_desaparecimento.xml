@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormDesaparecimento">
+
+    <View
+        android:id="@+id/ContainerComponents"
+        style="@style/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:background="@color/Very_light_gray"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/ContainerPet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/fotoPet"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_pet"
+        app:layout_constraintStart_toStartOf="@id/ContainerPet"
+        app:layout_constraintEnd_toEndOf="@id/ContainerPet"
+        app:layout_constraintTop_toTopOf="@id/ContainerPet"
+        app:layout_constraintBottom_toBottomOf="@id/ContainerPet"/>
+
+    <TextView
+        android:id="@+id/textNomePet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ContainerPet"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textRaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raça "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textNomePet"
+        app:layout_constraintLeft_toRightOf="@id/ContainerPet"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textPorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porte"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textNomePet"
+        app:layout_constraintLeft_toRightOf="@id/textRaca"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textPelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de pelo"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textRaca"
+        app:layout_constraintLeft_toRightOf="@id/ContainerPet"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textVirgula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=","
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textPorte"
+        app:layout_constraintLeft_toRightOf="@id/textPelo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idade"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textPorte"
+        app:layout_constraintLeft_toRightOf="@id/textVirgula"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/ContainerDesaparecimento"
+        style="@style/ContainerComponents"
+        android:layout_width="390dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContainerPet"/>
+
+    <TextView
+        android:id="@+id/title_PetDesaparecido"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_PetDesaparecido"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/ContainerDesaparecimento"
+        app:layout_constraintEnd_toEndOf="@id/ContainerDesaparecimento"
+        app:layout_constraintTop_toTopOf="@id/ContainerDesaparecimento"
+        />
+
+    <TextView
+        android:id="@+id/title_desaparecimento"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_desaparecimento"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/ContainerDesaparecimento"
+        app:layout_constraintEnd_toEndOf="@id/ContainerDesaparecimento"
+        app:layout_constraintTop_toTopOf="@id/ContainerDesaparecimento"
+        app:layout_constraintBottom_toBottomOf="@id/ContainerDesaparecimento"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_encontrei"
+        android:background="@drawable/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/encontrei_pet"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="@id/ContainerDesaparecimento"
+        app:layout_constraintTop_toBottomOf="@id/title_desaparecimento"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_voltar"
+        android:background="@drawable/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="@string/voltar_cadastro"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="30sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@id/ContainerDesaparecimento"
+        app:layout_constraintTop_toBottomOf="@id/title_desaparecimento"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

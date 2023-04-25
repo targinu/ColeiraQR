@@ -1,0 +1,39 @@
+ {
+  "project_info": {
+    "project_number": "457579825333",
+    "project_id": "coleiraqr",
+    "storage_bucket": "coleiraqr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457579825333:android:1ec6c8e875a1dfe8b456fc",
+        "android_client_info": {
+          "package_name": "com.fatec.coleiraqr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457579825333-l22ds4sp8h8nc5ckkc4aeoqg3sqb4ti7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSUZ6ym3pYFm-8-skqv4FQgtg67dnLgjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457579825333-l22ds4sp8h8nc5ckkc4aeoqg3sqb4ti7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
